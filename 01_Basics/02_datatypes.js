@@ -1,10 +1,10 @@
 "use strict"  
 /*
-his forces the compiler to treat the below codes as a newer version of js.
+his forces the compiler to treat the below codes as a newer version of js for the entire file.
 however it's not necessary now because the compiler can decide it by it's own.
 */
 
-//alert("Hello")  only works in browsers but we are using Node js.
+//alert("Hello")  only works in browsers, It will show a pop-up displayng the text/value. But we are using Node js so that's why it is not working.
 
 
 let age = 23  //integer datatype 
