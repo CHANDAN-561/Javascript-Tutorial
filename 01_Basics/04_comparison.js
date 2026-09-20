@@ -8,23 +8,18 @@ console.log("4 > 5: " + (4 > 5));
 console.log("6 <= 24: " + (6 <= 24));
 console.log("4 != 3: " + (4 != 3));
 
-
 //type casted comparasion
 console.log("\nTypecasted Comparison");
 console.log("'4' < 8: " + ("4" < 8));
 console.log("4 == '4': " + (4 == "4"));
 console.log("9 >= '14': " + (9 >= "14"));
 
-//strict comparison(===) however checks both the value and the datatype of each operand then produces a result
-
-//strict comparison
-console.log("\nStrict Comparison");
-console.log("4 === 4: " + (4 === 4));
-console.log("4 === 8: " + (4 === 8));
-console.log("'24' === 24: " + ("24" === 24));
-console.log("'6' === 9: " + ("6" === 9));
-
 //other cases
+console.log("\nundefined == 0: " + (undefined == 0));
+console.log("undefined > 0: " + (undefined > 0));
+console.log("undefined < 0: " + (undefined < 0));
+console.log("undefined <= 0: " + (undefined <= 0));
+
 console.log("\nnull == 0: " + (null == 0));
 console.log("null > 0: " + (null > 0));
 console.log("null < 0: " + (null < 0));
@@ -34,3 +29,12 @@ console.log("null >= 0: " + (null >= 0));
 //because the (==) operator and the (</>) operator works differently...
 //the (</>) operator converts the null value to 0 so but the (==) doesnn't...
 //which causes the different output
+
+//strict comparison
+console.log("\nStrict Comparison");
+console.log("4 === 4: " + (4 === 4));
+console.log("4 === 8: " + (4 === 8));
+console.log("'24' === 24: " + ("24" === 24));
+console.log("'6' === 9: " + ("6" === 9));
+
+//strict comparison(===) however checks both the value and the datatype of each operand then produces a result
