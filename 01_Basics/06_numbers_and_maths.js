@@ -16,7 +16,7 @@ const valueAsNumber = 34245;
 const bigNumber = 10000000;
 // console.log(bigNumber.toLocaleString('en-IN')); //this method makes it easier to read big numbers like this. By default it sets the American style (000,000,000) and provided correct values we can see different country presets.
 
-//++++++++++++++++++++++++++++++ Maths +++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++ Math ++++++++++++++++++++++++++++
 
 console.log(Math);
 console.log(Math.abs(-54)); //it changes the value into a positive value. Positive arguments are not effected ofc.
@@ -40,4 +40,4 @@ const max = 20
 const min = 12
 
 const randomWholeValue = (Math.random() * 10) + 1;
-console.log(Math.floor(randomWholeValue));
+console.log(Math.floor(randomWholeValue)); 
