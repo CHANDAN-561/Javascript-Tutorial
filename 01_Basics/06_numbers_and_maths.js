@@ -38,6 +38,5 @@ console.log(Math.floor((Math.random() * 10) + 1));
 //If you want we can make it so it will alawys give random values with in a range.
 const max = 20
 const min = 12
-
-const randomWholeValue = (Math.random() * 10) + 1;
-console.log(Math.floor(randomWholeValue)); 
+console.log (Math.floor(Math.random() * (max - min + 1) + min));
+//The (max - min + 1) + min makes sure the value says in range. This general formula is applicable everywhere containing this scenario.
