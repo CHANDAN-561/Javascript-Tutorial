@@ -11,5 +11,5 @@ const new_all_titles = [...xbox_titles, ...ps_titles]; //spread operation kind o
 console.log(new_all_titles); 
 
 const nested_array = [1, 2, [3, 4], 5, [6, 7, [8, 9]]];
-const flatted_array = nested_array.flat(Infinity); //flat() returns the combination of all nested arrays as a single array. The parameter spicifies the depth of the method, Infinity (argument) is what handles all depths automatically.
+const flatted_array = nested_array.flat(Infinity); //flat() returns the combination of all nested arrays as a single array. The parameter spicifies the depth of the method, Infinity (argument) is what handles all depths automatically. Using larger no of arguments than there are depth doesnt effect the operation.
 console.log(flatted_array);
