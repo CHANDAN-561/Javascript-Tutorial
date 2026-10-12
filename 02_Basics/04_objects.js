@@ -17,7 +17,7 @@ const user1 = { //Obj L2
     }
 }; //nesting of objects is completely possible in js, we just have to add multiple "." operators to access each level.
 
-console.log(`Hello ${user1["credential"]["full name"]["first name"]} ${user1["credential"]["full name"]["last name"]}, how are you`);
+// console.log(`Hello ${user1["credential"]["full name"]["first name"]} ${user1["credential"]["full name"]["last name"]}, how are you`);
 
 //obj concat
 const testObj1 = {1: "a", 2: "b"};
@@ -49,9 +49,25 @@ const users = [
     email: "13@gmail.com"
 }];
 
-console.log(users[1]["id"]);
+// console.log(users[1]["id"]);
 
-console.log(Object.keys(user0)); //returns the keys as an array.
-console.log(Object.values(user0)); //returns the values as an array.
-console.log(Object.entries(user0)); //returns every single key with its value as an array inside of an larger array.
-console.log(user0.hasOwnProperty('namwe')); //retuns a boolean value if the key is present in the obj or not. Its useful to do when we dont know what properties the obj has. This is done to prevent unknown crashes.
+// console.log(Object.keys(user0)); //returns the keys as an array.
+// console.log(Object.values(user0)); //returns the values as an array.
+// console.log(Object.entries(user0)); //returns every single key with its value as an array inside of an larger array.
+// console.log(user0.hasOwnProperty('namwe')); //retuns a boolean value if the key is present in the obj or not. Its useful to do when we dont know what properties the obj has. This is done to prevent unknown crashes.
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Object destructuring
+const car = {
+    make: "Toyota",
+    variant: "Innova",
+    price: 10_00_000,
+    color: "White",
+    type: "Personal"
+};
+
+//We do not have to include the obj's name everytime we want to access its properties. We can do this instead: 
+const {make} = car; // here now "variant" can be used just like any other variable.
+const {variant: model} = car; //we can rename the variable so that we can access it with a different name. Template: {<original name>: <Duplicate name>}.
+console.log(`I have a ${make} ${model} car.`); 
