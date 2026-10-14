@@ -63,3 +63,11 @@ console.log(welcomeNewUser({
     username: "hank",
     password: "fucking password"
 })); //or just pass obj directly.
+
+//The "..." operator aka spread operator helps us to take in as much values as we want in the form of an array. This is helpful when we dont know the number of values we need to paas to the function. Like eg:
+function functionValues(value1, value2, ...lastValues) {
+   console.log(value1, value2, ...lastValues);
+}; 
+//here the method only accepts 2 parameters but we dont know many values there are going to be in future. So to counter that we need use the "..." operator at the last parameter like shown above in the function def. So now the value (from the below values) 4 is copied to "value1" and 5 to "value2" in the function def. Now rest of the values are going to be copied into "lastValues" in the form of an array. If we just print the variable "lastValues" the values will contain an array (with the boundries). To make it appear normally we spread the values of the array by the "..." operator while printing.
+
+functionValues(4, 5, 9, 0, 7, 5, 4, 47, "hoi", '23s');
