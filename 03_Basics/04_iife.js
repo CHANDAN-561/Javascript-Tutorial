@@ -26,4 +26,3 @@
    console.log(`Hello ${userName} Welcome back.`);
 }) ('Sumo');
 //This is a different way of declaring IIFE functions where the () at the end represents function execution operator.
-
