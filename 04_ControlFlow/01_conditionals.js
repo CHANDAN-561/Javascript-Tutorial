@@ -105,12 +105,12 @@ console.log((inStock)? `Item in stock` : `Item not in stock` );
 //There are these comparison operations
 //<, >, <=, >=, ==, !=, ===, !==
 
-console.log((2 > 3)? "true" : "false");
-console.log((2 < 3)? "true" : "false");
-console.log((4 >= 3)? "true" : "false");
-console.log((3 <= 3)? "true" : "false");
-console.log((3 == 3)? "true" : "false");
+console.log((2 > 3)? "true" : "false"); 
+console.log((2 < 3)? "true" : "false"); 
+console.log((4 >= 3)? "true" : "false"); //less than or equals
+console.log((3 <= 3)? "true" : "false"); 
+console.log((3 == 3)? "true" : "false"); // values only
 console.log((2 != 3)? "true" : "false");
-console.log((2 != "2")? "true" : "false");
-console.log((2 === "3")? "true" : "false");
-console.log((false !== 0)? "true" : "false");
+console.log((2 != "2")? "true" : "false"); 
+console.log((2 === "3")? "true" : "false"); //type and value
+console.log((false !== 0)? "true" : "false"); //type and value
