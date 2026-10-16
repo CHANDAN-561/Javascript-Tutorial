@@ -94,3 +94,10 @@ if ((hasEmail || hasUsername) && hasPassword) {
     console.log(`Error logging in`);
 }
 // In this case if have either email or username it is possible to login but you must have your password.
+
+//Ternary Operator:
+//This is a different way of executing an if statement...
+//Syntax: (condition) ? <if true> : <if false>;
+
+const inStock = true;
+console.log((inStock)? `Item in stock` : `Item not in stock` );
