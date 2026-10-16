@@ -101,3 +101,16 @@ if ((hasEmail || hasUsername) && hasPassword) {
 
 const inStock = true;
 console.log((inStock)? `Item in stock` : `Item not in stock` );
+
+//There are these comparison operations
+//<, >, <=, >=, ==, !=, ===, !==
+
+console.log((2 > 3)? "true" : "false");
+console.log((2 < 3)? "true" : "false");
+console.log((4 >= 3)? "true" : "false");
+console.log((3 <= 3)? "true" : "false");
+console.log((3 == 3)? "true" : "false");
+console.log((2 != 3)? "true" : "false");
+console.log((2 != "2")? "true" : "false");
+console.log((2 === "3")? "true" : "false");
+console.log((false !== 0)? "true" : "false");
