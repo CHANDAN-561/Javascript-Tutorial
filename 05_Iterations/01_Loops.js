@@ -60,7 +60,7 @@ do {
 
 // Variations of for loops (Generally used in arrays).
 
-// --1. for of loop
+// --1. for-of loop
 //sytax: 
 // for (<iterator variable> of <object>) {
 // codes
@@ -68,7 +68,70 @@ do {
 
 const numbers = [1, 2, 3, 4, 5]
 for (const num of numbers) {
-    console.log(num);
+    // console.log(num);
 };
 
+
+//Maps
+//map is an object that holds key value pair and remembers the order of insertion of the values. Repeatation of the keys are ignored here.
+
 const myMap = new Map();
+myMap.set('Country', "India");
+myMap.set('State', "Orissa");
+myMap.set('City', "Bam");
+myMap.set('State', "Odisha"); //repeated keys are ignored, Only the latest value for the same key retains.
+
+for (const key of myMap) { //this prints both key and values
+    // console.log(key);
+};
+
+//If only key or only value is needed then we have to try a different syntax of the for-of loop
+for (const [key, value] of myMap) {
+    // console.log(`Value of '${key}' is: ''${value}`);
+};
+//this only works with maps not with simple objects. Because unlike simple objects, maps are iterable with for-of loop.
+
+
+// --2. for-in loop
+const nums = ["one", "two", "three", "four", "five", "six"];
+const myObj = {
+    js: "javascript",
+    swift: "swift",
+    kt: "kotlin",
+    class: "Bytecode in Java"
+};
+
+for (const key in myObj) {
+    // console.log(`${key} stands for ${myObj[key]}`);
+};
+
+for (const key in nums) {
+    // console.log(`${key}: ${nums[key]}`);
+};
+
+//this loop doesnt work with maps because map object is not iterable with for-in loop.
+
+
+// --3. for-in loop
+
+//for-each loop is an inbuilt function in the Array class. We can use it with any array.
+//in for-each loop we have to pass in a function that has no name (call back function) and inside that function's parameter we have to pass the iterator (eg: "i" in for loops) and then that iterator will reference to each and every values at the indexes sequencially.
+//not just call back funtions, we can pass in arrow functions and functions that are defined else where.
+
+const values = ["Hola", "Hello", "Namaste", "Ni hao", "Konnichiwa"];
+
+//using call back function
+values.forEach( function (index) {
+    // console.log(index);
+} );
+
+//using array function
+values.forEach( (index) => {
+    // console.log(index);
+} );
+
+//using functions that are not defined here 
+function printValues(key) {
+    console.log(key);
+};
+values.forEach( printValues );
