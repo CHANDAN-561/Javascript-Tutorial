@@ -74,6 +74,7 @@ for (const num of numbers) {
 
 //Maps
 //map is an object that holds key value pair and remembers the order of insertion of the values. Repeatation of the keys are ignored here.
+//syntax for insertion is: myMap.set(key, vallue);
 
 const myMap = new Map();
 myMap.set('Country', "India");
@@ -134,4 +135,5 @@ values.forEach( (index) => {
 function printValues(key) {
     console.log(key);
 };
-values.forEach( printValues );
+values.forEach(printValues);
+//in such cases we just have to reference the function, not execute it by adding a () beside the function name. It is the same as the 1st case, just instead of the call back function we reference an actual function as the parameter for the loop.
