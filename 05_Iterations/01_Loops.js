@@ -113,7 +113,7 @@ for (const key in nums) {
 //this loop doesnt work with maps because map object is not iterable with for-in loop.
 
 
-// --3. for-in loop
+// --3. for-each loop
 
 //for-each loop is an inbuilt function in the Array class. We can use it with any array.
 //in for-each loop we have to pass in a function that has no name (call back function) and inside that function's parameter we have to pass the iterator (eg: "i" in for loops) and then that iterator will reference to each and every values at the indexes sequencially.
@@ -133,7 +133,41 @@ values.forEach( (index) => {
 
 //using functions that are not defined here 
 function printValues(key) {
-    console.log(key);
+    // console.log(key);
 };
 values.forEach(printValues);
 //in such cases we just have to reference the function, not execute it by adding a () beside the function name. It is the same as the 1st case, just instead of the call back function we reference an actual function as the parameter for the loop.
+
+//In for each loop, we don't only get the value as the callback function's parameter... We get the index of the current value and the entire array as well. They are just the other parameters we have not been using since now. 
+
+const languages = ["javascript", "java", "kotlin", "php", "rust"];
+
+languages.forEach( (value, index, array) => {
+    // console.log(`Value: ${value}, Index: ${index}, ArrayItems: [${array}]`);
+} );
+//We can use each parameters differently to get different usecases.
+
+//And obviously we can access the objects and their attributes that come in the form of an array.
+const ObjLanguages = [
+    {
+        name: "Javascript",
+        ext: "js"
+    },
+    {
+        name: "kotlin",
+        ext: "kt"
+    },
+    {
+        name: "php",
+        ext: "php"
+    },
+    {
+        name: "java",
+        ext: "java"
+    }
+];
+
+ObjLanguages.forEach( (value) => {
+    console.log(`Name: ${value.name} and it's extension: ${value.ext}`);
+} );
+//Since "value" holds the current iterating index we can replace the indexes for each value with "value". This is really helpful because when data comes from the databases it usually comes in the form of array or JSON. Both of which usually are objects.
