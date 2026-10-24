@@ -177,4 +177,12 @@ const returnedValues = ArrayOfNums.filter( (item) => item > 3 );
 const numValues = [1, 2, 3, 4, 5, 6, 7, 8];
 const calculatedNumValue = numValues.map((item) => item * 10).map((item) => item + 4).filter((item) => {return item > 22}); //map() functions the same as for-each loop.
 
-console.log(calculatedNumValue);
+// console.log(calculatedNumValue);
+
+//reduce() functions as a "sum of all digits in an array" operation where the method returns the sum of all items in in array.
+
+const items = [1, 2, 3, 4, 5];
+const sumOfItems = items.reduce((startingValue, currentIndexValue) => (startingValue + currentIndexValue), 0);
+console.log(sumOfItems);
+
+//the 0 in the reduce function (separated by a comma "," in the callback function) is the initializer value which at first assigns to "startingValue" and that's it. After that the startingValue and the currentIndexValue adds up and then assigns the sum to the "startingValue" and then the cycle starts again till its the end of the array.
