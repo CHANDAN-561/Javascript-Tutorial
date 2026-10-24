@@ -137,3 +137,44 @@ function printValues(key) {
 };
 values.forEach(printValues);
 //in such cases we just have to reference the function, not execute it by adding a () beside the function name. It is the same as the 1st case, just instead of the call back function we reference an actual function as the parameter for the loop.
+
+//In for-each loop we do not just get the value at the current index of the array we are refering, as an argument  for the callback function... Instead we get each indexes of the current iteration as well as the entire array.
+
+const languages = ["javascript", "Kotlin", "Ruby", "Rust", "Java"];
+languages.forEach( (value, index, entireArray) => {
+    // console.log(index, value, entireArray);
+} );
+
+//We can access objects and their attributes that comes as an array. This loop is generally used in such cases because databases usually sends value as an array which may contain objects.
+
+const ObjArray = [
+    {
+    name: "javascript",
+    ext: "js"
+    },
+    {
+    name: "kotlin",
+    ext: "kt"
+    },
+    {
+    name: "Java",
+    ext: "java"
+    }
+];
+ObjArray.forEach( (item) => {
+    // console.log(`${item.name}'s extension is: ${item.ext}`);
+} );
+
+//for-each loop doesn't return any values (even when return keyword is used), but when we need an item from an array to be returned after a certian condition then we have to use filter(), which functions just like for-each loop but here we just have to give it a condition, then only the values which follows that condition gets returned.
+
+const ArrayOfNums = [1, 2, 3, 4, 5, 6, 7];
+const returnedValues = ArrayOfNums.filter( (item) => item > 3 );
+// console.log(returnedValues);
+//here we cant use curly braces {}, to write the condition in and expect it to return the values directly, because {} starts a scope, from which we have to explicitly specify to return. Parenthesis is useable to return values directly  or just write the condition directly.
+
+//We can use multiple functions on a single array and it is called function chaining.
+
+const numValues = [1, 2, 3, 4, 5, 6, 7, 8];
+const calculatedNumValue = numValues.map((item) => item * 10).map((item) => item + 4).filter((item) => {return item > 22}); //map() functions the same as for-each loop.
+
+console.log(calculatedNumValue);
