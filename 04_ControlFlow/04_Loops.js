@@ -186,3 +186,4 @@ const sumOfItems = items.reduce((startingValue, currentIndexValue) => (startingV
 console.log(sumOfItems);
 
 //the 0 in the reduce function (separated by a comma "," in the callback function) is the initializer value which at first assigns to "startingValue" and that's it. After that the startingValue and the currentIndexValue adds up and then assigns the sum to the "startingValue" and then the cycle starts again till its the end of the array.
+
