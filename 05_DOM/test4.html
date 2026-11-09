@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="languages">
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+        //adding a new element
+        function addLanguages(lang) {
+            const li = document.createElement('li');
+            const addListText = document.createTextNode(`${lang}`);
+            const ul = document.querySelector(".languages");
+            li.appendChild(addListText);
+            ul.appendChild(li);
+        };
+
+        addLanguages("Java");
+        addLanguages("Direct x12");
+        addLanguages("Ruby");
+
+        //edit an existing element
+        function replaceTextWith(target, replacement) {
+            if (target <= document.querySelector('.languages').children.length) {
+                const oldText = document.querySelector(`li:nth-child(${target})`);
+                 const newTextNode = document.createElement('li');
+                 newTextNode.textContent = replacement;
+                 oldText.replaceWith(newTextNode);
+                 //             or
+                //  const textNode = document.querySelector(`li:nth-child(${target})`);
+                //  textNode.outerHTML = `<li>${replacement}</li>`;
+            } else {
+                alert("Target out of bound!");
+            }
+        };
+
+        replaceTextWith(3, "Hello");
+        replaceTextWith(4, "GOOGOO GAGA");
+
+        //remove element
+        function removeElement(target) {
+            if (target > document.querySelector('.languages').children.length) {
+                alert('');
+            }
+            const element = document.querySelector(`li:nth-child(${target})`);
+            element.remove();
+        };
+
+        removeElement(4);
+    </script>
+</body>
+</html>

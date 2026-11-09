@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Site</title>
+</head>
+<body style="background-color: #000; color: #fff;">
+    
+</body>
+<script>
+    const customDiv = document.createElement('div');
+    console.log(customDiv);
+    customDiv.className = "main-div";
+    customDiv.id = "div-id";
+    customDiv.style.backgroundColor = "purple";
+    customDiv.style.padding = "4px";
+    customDiv.style.paddingLeft = "200px";
+    customDiv.style.borderRadius = "10px";
+    customDiv.id = Math.floor(Math.random() * 10 + 1);
+    customDiv.setAttribute("title", "div title");
+    // as of now we have created a div and altered its attributes but the page wont show it up. Because the div is still in memory only. To make it appear on the website we must link the div element to its parent node (in this case, body).
+    const textNode = document.createTextNode("Hello world!");
+    customDiv.appendChild(textNode);
+    //here we link the text node to the body tag...
+    document.body.appendChild(customDiv);
+</script>
+</html>
